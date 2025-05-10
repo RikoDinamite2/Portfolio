@@ -87,6 +87,7 @@ span{
     transition: 0.3s ease-in-out;
     border: none;
     text-wrap: nowrap;
+    font-weight: 600;
 }
 .gradient-btn:hover{
     transform: scale(1.1);
