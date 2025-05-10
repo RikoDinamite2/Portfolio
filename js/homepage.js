@@ -6,7 +6,7 @@ menuIcon.onclick = () => {
 } 
 function donwload_pdf(){
     const link=document.createElement('a');
-    link.href='../pdf/cv.pdf';
+    link.href='pdf/cv.pdf';
     link.download='curriculum.pdf';
     link.click();
 }
