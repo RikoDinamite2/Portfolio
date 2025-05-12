@@ -16,7 +16,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-family: "Poppins";
-    outline: 1px solid red;
 }
 html{
     font-size: 60%;
