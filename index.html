@@ -17,8 +17,8 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#games">Games</a>
         </nav>
-        <button class="gradient-btn">Contact me</button>
     </header>
 
     <section class="home" id="home">
@@ -44,7 +44,6 @@
             </div>
             <div class="btn-group">
                 <a href="#" class="btn" onclick="donwload_pdf()">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
             </div>
         </div>
         <div class="home-img">
@@ -65,7 +64,7 @@
                 music, and drawing. Five years ago, I discovered programming—a new love. Lastly,
                 I have an amazing girlfriend who, somehow, still manages to put up with me.
             </p> 
-            <a href="https://google.com" class="btn">Read More</a>
+            <a href="#services" class="btn">Read More</a>
         </div>
     </section>
 
@@ -123,6 +122,82 @@
             </div>
         </div>
     </section>
+    <section class="games" id="games">
+        <h2 class="heading">Games</h2>
+        <div class="filters">
+            <button class="filter-btn active gradient-btn-second" data-filter="all">All</button>
+            <button class="filter-btn gradient-btn-second" data-filter="Steam">Steam</button>
+            <button class="filter-btn gradient-btn-second" data-filter="Xbox">Xbox/PC Gamepass</button>
+            <button class="filter-btn gradient-btn-second" data-filter="Ubisoft">Ubisoft</button>
+        </div>
+        <div class="gallery">
+            <div class="item Xbox">
+                <div class="tooltip">Assasin's Creed Odyssey</div>
+                <img src="acodyssey.jpg" alt="1">
+            </div>
+            <div class="item Xbox">
+                <div class="tooltip">A Memoir Blue</div>
+                <img src="2x1_NSwitchDS_AMemoirBlue.jpg" alt="1">
+            </div>
+            <div class="item Xbox">
+                <div class="tooltip">Maneater</div>
+                <img src="maneater.jpeg" alt="1">
+            </div>
+            <div class="item Xbox">
+                <div class="tooltip">Townscape</div>
+                <img src="townscape.jpeg" alt="1">
+            </div>
+            <div class="item Xbox">
+                <div class="tooltip">Destroy all Humans</div>
+                <img src="destroyallhumans.jpg" alt="1">
+            </div>
+            <div class="item Xbox">
+                <div class="tooltip">Hellblade Sanua Sacrifice</div>
+                <img src="hellblade.webp" alt="1">
+            </div>
+            <div class="item Steam">
+                <div class="tooltip">Dark souls Remastered</div>
+                <img src="ds1.jpg" alt="1">
+            </div>
+            <div class="item Steam">
+                <div class="tooltip">Elden Ring</div>
+                <img src="eldenring.avif" alt="1">
+            </div>
+            <div class="item Ubisoft">
+                <div class="tooltip">Assassin’s creed</div>
+                <img src="ac1.webp" alt="1">
+            </div>
+            <div class="item Ubisoft">
+                <div class="tooltip">Assassin’s creed II</div>
+                <img src="ac2.webp" alt="1">
+            </div>
+            <div class="item Ubisoft">
+                <div class="tooltip">Assassin’s creed Brotherhood</div>
+                <img src="acbh.webp" alt="1">
+            </div>
+        </div>
+    </section>
+    <script>
+        const buttons = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.item');
+    
+        buttons.forEach(button => {
+          button.addEventListener('click', () => {
+            buttons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+    
+            const filter = button.getAttribute('data-filter');
+    
+            items.forEach(item => {
+              if (filter === 'all' || item.classList.contains(filter)) {
+                item.classList.remove('hidden');
+              } else {
+                item.classList.add('hidden');
+              }
+            });
+          });
+        });
+      </script>
     <footer class="footer">
         <div class="social-icons">
             <a href="https://github.com/popasebastiano" target="_blank">
